@@ -10,6 +10,7 @@ packages:
     - awscli==1.18.2
     - thefuck
   sys:
+    - gcc
     - bind-tools
     - coreutils
     - curl
