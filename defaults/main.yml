@@ -18,6 +18,7 @@ packages:
     - dnsutils
     - htop
     - lsof
+    - make
     - strace
     - sudo
     - wget
