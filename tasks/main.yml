@@ -1,0 +1,24 @@
+# tasks file for ansible-role-packages
+---
+- name: Update system
+  pacman:
+    update_cache: true
+    upgrade: true
+
+- name: Install system packages
+  become: true
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ packages.sys }}"
+    - "{{ packages.lang}}"
+    - "{{ packages.cli }}"
+    - "{{ packages.dev }}"
+  tags: [packages]
+
+- name: Install pip packages
+  pip:
+    name: "{{ packages.pip }}"
+    state: present
+  tags: [packages]

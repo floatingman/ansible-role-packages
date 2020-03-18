@@ -1,0 +1,53 @@
+---
+# defaults file for ansible-role-packages
+packages:
+  pip:
+    - flake8
+    - testinfra
+    - molecule
+    - yq
+    - ansible==2.9.5
+    - awscli==1.18.2
+    - thefuck
+  sys:
+    - bind-tools
+    - coreutils
+    - curl
+    - dateutils
+    - dnsutils
+    - htop
+    - lsof
+    - strace
+    - sudo
+    - wget
+    - whois
+  cli:
+    - broot
+    - fasd
+    - fd
+    - htop
+    - ranger
+    - ripgrep
+    - rsync
+    - tmux
+    - tmux
+    - unzip
+    - zip
+    - zsh
+    - ipcalc
+  dev:
+    - emacs
+    - git
+    - jq
+    - tig
+    - neovim
+  lang:
+    - python
+    - python-pip
+    - python-boto
+    - ipython
+    - go
+  cloud:
+    - kubectl
+    - k9s
+    - kubectx
