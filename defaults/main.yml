@@ -23,6 +23,7 @@ packages:
     - wget
     - whois
   cli:
+    - awk
     - broot
     - fasd
     - fd
