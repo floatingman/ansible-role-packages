@@ -1,5 +1,6 @@
 ---
 # defaults file for ansible-role-packages
+install_yay: true
 packages:
   pip:
     - flake8
@@ -50,6 +51,7 @@ packages:
     - python-boto
     - ipython
     - go
+    - nodejs
   cloud:
     - kubectl
     - k9s

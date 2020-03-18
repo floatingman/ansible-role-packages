@@ -23,3 +23,7 @@
     name: "{{ packages.pip }}"
     state: present
   tags: [packages]
+
+- name: Install yay
+  include: yay.yml
+  when: install_yay

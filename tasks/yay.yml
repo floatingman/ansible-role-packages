@@ -1,0 +1,17 @@
+# file for installing yay aur manager
+---
+
+- name: Git clone yay
+  git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: yay
+
+- name: Make yay
+  shell: makepkg -si --noconfirm --noprogressbar
+  args:
+    chdir: yay
+
+- name: Clean up yay
+  file:
+    path: yay
+    state: absent
