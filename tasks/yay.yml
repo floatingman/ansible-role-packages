@@ -1,5 +1,12 @@
 # file for installing yay aur manager
 ---
+- name: Install dependencies
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - make
+    - base-devel
 
 - name: Git clone yay
   git:
