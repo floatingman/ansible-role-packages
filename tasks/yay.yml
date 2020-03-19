@@ -3,11 +3,8 @@
 - name: Install dependencies
   become: true
   pacman:
-    name: "{{ item }}"
+    name: ['make', 'base-devel']
     state: present
-  with_items:
-    - make
-    - base-devel
 
 - name: Git clone yay
   git:
