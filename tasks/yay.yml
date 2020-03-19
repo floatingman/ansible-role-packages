@@ -1,6 +1,7 @@
 # file for installing yay aur manager
 ---
 - name: Install dependencies
+  become: true
   pacman:
     name: "{{ item }}"
     state: present
