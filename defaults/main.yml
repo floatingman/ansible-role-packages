@@ -31,15 +31,16 @@ packages:
     - fasd
     - fd
     - htop
+    - ipcalc
     - ranger
     - ripgrep
     - rsync
+    - rxvt-unicode-terminfo
     - tmux
     - tmux
     - unzip
     - zip
     - zsh
-    - ipcalc
   dev:
     - emacs
     - git
