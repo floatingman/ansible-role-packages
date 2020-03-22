@@ -15,6 +15,7 @@
   shell: makepkg -si --noconfirm --noprogressbar
   args:
     chdir: yay
+  when: run_in_molecule is defined and run_in_molecule == true
 
 - name: Clean up yay
   file:

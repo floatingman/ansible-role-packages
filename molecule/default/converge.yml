@@ -1,6 +1,8 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    run_in_molecule: true
   tasks:
     - name: "Include ansible-role-packages"
       include_role:
