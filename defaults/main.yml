@@ -39,6 +39,7 @@ packages:
     - rxvt-unicode-terminfo
     - tmux
     - tmux
+    - tree
     - unzip
     - zip
     - zsh
