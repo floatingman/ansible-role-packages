@@ -26,4 +26,4 @@
 
 - name: Install yay
   include: yay.yml
-  when: install_yay
+  when: install_yay and run_in_molecule is defined and run_in_molecule == true

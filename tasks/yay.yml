@@ -1,6 +1,6 @@
 # file for installing yay aur manager
 ---
-- name: Install dependencies
+- name: Install yay dependencies
   become: true
   pacman:
     name: ['make', 'base-devel']
@@ -15,7 +15,6 @@
   shell: makepkg -si --noconfirm --noprogressbar
   args:
     chdir: yay
-  when: run_in_molecule is defined and run_in_molecule == true
 
 - name: Clean up yay
   file:
