@@ -6,7 +6,7 @@ packages:
     - flake8
     - testinfra
     - molecule
-    - 'molecule[docker]'
+    - "molecule[docker]"
     - yq
     - ansible==2.9.5
     - awscli==1.18.2
@@ -23,6 +23,7 @@ packages:
     - make
     - strace
     - sudo
+    - tar
     - wget
     - whois
   cli:
