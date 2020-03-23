@@ -11,6 +11,7 @@ packages:
     - ansible==2.9.5
     - awscli==1.18.2
     - thefuck
+    - neovim-remote
   sys:
     - gcc
     - bind-tools
