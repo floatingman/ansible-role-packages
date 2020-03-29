@@ -6,7 +6,7 @@
     update_cache: true
     upgrade: true
 
-- name: Install system packages
+- name: Install packages
   become: true
   package:
     name: "{{ item }}"
@@ -23,7 +23,3 @@
     name: "{{ packages.pip }}"
     state: present
   tags: [packages]
-
-- name: Install yay
-  include: yay.yml
-  when: install_yay and run_in_molecule is defined and run_in_molecule == true

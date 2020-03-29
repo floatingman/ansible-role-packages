@@ -1,6 +1,5 @@
 ---
 # defaults file for ansible-role-packages
-install_yay: true
 packages:
   pip:
     - flake8
