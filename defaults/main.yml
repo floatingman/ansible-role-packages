@@ -1,16 +1,5 @@
 ---
 # defaults file for ansible-role-packages
-packages:
-  pip:
-    - flake8
-    - testinfra
-    - molecule
-    - "molecule[docker]"
-    - yq
-    - ansible==2.9.5
-    - awscli==1.18.2
-    - thefuck
-    - neovim-remote
   sys:
     - gcc
     - bind-tools

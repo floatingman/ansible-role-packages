@@ -17,9 +17,3 @@
     - "{{ packages.cli }}"
     - "{{ packages.dev }}"
   tags: [packages]
-
-- name: Install pip packages
-  pip:
-    name: "{{ packages.pip }}"
-    state: present
-  tags: [packages]
