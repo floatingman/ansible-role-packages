@@ -28,6 +28,7 @@
     - rxvt-unicode-terminfo
     - tmux
     - tmux
+    - trash-cli
     - tree
     - unzip
     - zip
