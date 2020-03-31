@@ -47,6 +47,7 @@ packages:
     - ipython
     - go
     - nodejs
+    - npm
   cloud:
     - kubectl
     - k9s
