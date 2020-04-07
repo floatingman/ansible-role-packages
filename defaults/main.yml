@@ -48,6 +48,7 @@ packages:
     - go
     - nodejs
     - npm
+    - jdk-openjdk
   cloud:
     - kubectl
     - k9s
