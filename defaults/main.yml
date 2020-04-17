@@ -1,0 +1,11 @@
+---
+# defaults file for ansible-role-packages
+languages:
+  - python
+  - python-pip
+  - python-boto
+  - ipython
+  - go
+  - nodejs
+  - npm
+  - jdk-openjdk
