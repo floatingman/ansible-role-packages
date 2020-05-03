@@ -1,4 +1,4 @@
-Role Name
+ansible-role-packages
 =========
 
 Install common packages on an Arch Linux based system via pacman.
