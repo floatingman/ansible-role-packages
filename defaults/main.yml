@@ -27,6 +27,7 @@ packages:
     - ripgrep
     - rsync
     - rxvt-unicode-terminfo
+    - shellcheck
     - tmux
     - tmux
     - trash-cli
