@@ -18,7 +18,6 @@ packages:
     - whois
   cli:
     - awk
-    - broot
     - fasd
     - fd
     - htop
