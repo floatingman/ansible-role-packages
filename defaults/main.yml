@@ -1,42 +1,70 @@
 ---
 # defaults file for ansible-role-packages
-packages:
-  sys:
-    - gcc
-    - bind-tools
-    - coreutils
-    - curl
-    - dateutils
-    - dnsutils
-    - htop
-    - lsof
-    - make
-    - strace
-    - sudo
-    - tar
-    - wget
-    - whois
-  cli:
-    - awk
-    - fasd
-    - fd
-    - htop
-    - ipcalc
-    - ranger
-    - ripgrep
-    - rsync
-    - rxvt-unicode-terminfo
-    - shellcheck
-    - tmux
-    - tmux
-    - trash-cli
-    - tree
-    - unzip
-    - zip
-    - zsh
-  dev:
-    - emacs
-    - git
-    - jq
-    - tig
-    - neovim
+common:
+  - neovim
+  - htop
+  - tig
+  - bind-tools
+  - coreutils
+  - curl
+  - dateutils
+  - dnsutils
+  - lsof
+  - strace
+  - sudo
+  - wget
+  - whois
+  - htop
+  - zip
+  - fasd
+  - ipcalc
+  - ranger
+  - ripgrep
+  - rsync
+  - shellcheck
+  - tmux
+  - trash-cli
+  - tree
+  - zip
+  - pandoc
+  - pdfgrep
+  - fdupes
+  - ncdu
+  - newsboat
+  - translate-shell
+  - sshfs
+  - xclip
+  - emacs
+  - ctags
+  - neovim
+  - tig
+  - hugo
+  - texlive
+
+debian:
+  - fd-find
+
+arch:
+  - fd
+
+laptop:
+  - syncthing
+  - firefox
+  - keepassxc
+  - pinta
+  - inkscape
+  - kdeconnect
+  - hledger
+  - hledger-ui
+  - isync
+  - khal
+  - khard
+  - msmtp
+  - neomutt
+  - notmuch
+  - notmuch-mutt
+  - powertop
+  - vdirsyncer
+  - urlscan
+  - sxhkd
+  - xcape

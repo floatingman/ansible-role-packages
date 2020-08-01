@@ -1,18 +1,36 @@
 # tasks file for ansible-role-packages
 ---
-- name: Update system
-  become: true
-  pacman:
-    update_cache: true
-    upgrade: true
-
-- name: Install packages
+- name: Install common packages
   become: true
   package:
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ packages.sys }}"
-    - "{{ packages.cli }}"
-    - "{{ packages.dev }}"
-  tags: [packages]
+    - "{{ common }}"
+
+- name: Install Arch packages
+  become: true
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ arch }}"
+  when: ansible_os_family == "Archlinux"
+
+- name: Install Debian packages
+  become: true
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ debian }}"
+  when: ansible_os_family == "Debian"
+
+- name: Install Laptop packages
+  become: true
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ laptop }}"
+  when: force_install|default(false)|bool == true

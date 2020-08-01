@@ -1,18 +1,21 @@
 ansible-role-packages
 =========
 
-Install common packages on an Arch Linux based system via pacman.
+Install applications on an Arch or Ubuntu based systems via its package manager.
 
 Requirements
 ------------
 
-- Arch Linux (pacman)
+- Arch Linux or Ubuntu based OS
 - Sudo permissions
 
 Role Variables
 --------------
 
-No variables
+| Variable | default | Description |
+|-|-|-|
+| laptop | false | wether to install laptop specific applications |
+
 
 Dependencies
 ------------
@@ -27,6 +30,9 @@ Example Playbook
 - name: Playbook
   hosts: localhost
   connection: local
+  pre_tasks:
+    - set_fact:
+      laptop: true
   roles:
     - ansible-role-packages
 ```
