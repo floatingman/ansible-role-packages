@@ -1,10 +1,7 @@
-
-Install applications on an Arch or Ubuntu based systems via its package manager.
-=======
-ansible-role-languages
+ansible-role-packages
 =========
 
-Installs certain programming languages on Arch Linux based systems via pacman.
+Install applications on an Arch or Ubuntu based systems via its package manager.
 
 Requirements
 ------------
