@@ -12,11 +12,6 @@ Requirements
 Role Variables
 --------------
 
-| Variable | default | Description |
-|-|-|-|
-| laptop | false | wether to install laptop specific applications |
-
-
 Dependencies
 ------------
 
