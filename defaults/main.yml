@@ -37,9 +37,14 @@ common:
   - emacs
   - ctags
   - neovim
+  - neomutt
   - tig
   - hugo
   - texlive
+  - urlview
+  - ueberzug
+  - vifm
+  - kafkacat
 
 debian:
   - fd-find
