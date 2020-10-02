@@ -3,36 +3,28 @@
 - name: Install common packages
   become: true
   package:
-    name: "{{ item }}"
+    name: ['{{ common }}']
     state: present
-  with_items:
-    - "{{ common }}"
 
 - name: Install Arch packages
   become: true
   pacman:
-    name: "{{ item }}"
+    name: ['{{ arch }}']
     state: present
-  with_items:
-    - "{{ arch }}"
   when: ansible_os_family == "Archlinux"
 
 - name: Install Debian packages
   become: true
   apt:
-    name: "{{ item }}"
+    name: ['{{ debian }}']
     state: present
-  with_items:
-    - "{{ debian }}"
   when: ansible_os_family == "Debian"
 
 - name: Install Laptop packages
   become: true
   apt:
-    name: "{{ item }}"
+    name: ['{{ laptop }}']
     state: present
-  with_items:
-    - "{{ laptop }}"
   when: force_install|default(false)|bool == true
 
 - include_tasks: yay.yml
