@@ -9,7 +9,7 @@
 - name: Install Arch packages
   become: true
   pacman:
-    name: ['{{ arch }}']
+    name: '{{ arch }}'
     state: present
   when: ansible_os_family == "Archlinux"
 
