@@ -2,6 +2,9 @@
 # defaults file for ansible-role-packages
 common:
   - neovim
+  - bison
+  - flex
+  - pkg-config
   - htop
   - tig
   - bind-tools
@@ -40,11 +43,10 @@ common:
   - neomutt
   - tig
   - hugo
-  - texlive
-  - urlview
+  - texlive-core
   - ueberzug
   - vifm
-  - kafkacat
+  - ttf-hack
 
 debian:
   - fd-find

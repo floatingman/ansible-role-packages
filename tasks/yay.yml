@@ -1,0 +1,14 @@
+- name: Git clone yay
+  git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: /tmp/yay
+
+- name: Make yay
+  shell: makepkg -si --noconfirm --noprogressbar
+  args:
+    chdir: /tmp/yay
+
+- name: Clean up yay
+  file:
+    path: yay
+    state: /tmp/absent

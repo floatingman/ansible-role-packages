@@ -34,3 +34,6 @@
   with_items:
     - "{{ laptop }}"
   when: force_install|default(false)|bool == true
+
+- include_tasks: yay.yml
+  when: aur == "true"
