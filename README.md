@@ -1,7 +1,7 @@
 ansible-role-packages
 =========
 
-Install applications on an Arch or Ubuntu based systems via its package manager.
+Install applications on an Arch or Ubuntu based systems via its package manager. Optionally, install yay as AUR package manager on Arch based systems.
 
 Requirements
 ------------
@@ -12,10 +12,12 @@ Requirements
 Role Variables
 --------------
 
+- `yay`: set tot true to install [yay](https://github.com/Jguer/yay)
+
 Dependencies
 ------------
 
-No dependencies
+ansible-role-basic
 
 Example Playbook
 ----------------
