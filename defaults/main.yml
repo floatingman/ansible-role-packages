@@ -1,52 +1,58 @@
 ---
 # defaults file for ansible-role-packages
 common:
-  - neovim
-  - bison
-  - flex
-  - pkg-config
-  - htop
-  - tig
   - bind-tools
+  - bison
   - coreutils
+  - ctags
   - curl
   - dateutils
   - dnsutils
-  - lsof
-  - strace
-  - sudo
-  - wget
-  - whois
-  - htop
-  - zip
+  - docker
+  - emacs
   - fasd
+  - fdupes
+  - figlet
+  - flex
+  - htop
+  - htop
+  - hugo
   - ipcalc
+  - lsof
+  - mpv
+  - ncdu
+  - neomutt
+  - neovim
+  - neovim
+  - newsboat
+  - pandoc
+  - pdfgrep
+  - pkg-config
+  - prettier
   - ranger
   - ripgrep
   - rsync
   - shellcheck
+  - sshfs
+  - strace
+  - sudo
+  - surfraw
+  - texlive-core
+  - tig
+  - tig
+  - time
   - tmux
+  - translate-shell
   - trash-cli
   - tree
-  - zip
-  - pandoc
-  - pdfgrep
-  - fdupes
-  - ncdu
-  - newsboat
-  - translate-shell
-  - sshfs
-  - xclip
-  - emacs
-  - ctags
-  - neovim
-  - neomutt
-  - tig
-  - hugo
-  - texlive-core
+  - ttf-hack
   - ueberzug
   - vifm
-  - ttf-hack
+  - wget
+  - whois
+  - xclip
+  - zip
+  - zip
 
 debian:
   - fd-find
