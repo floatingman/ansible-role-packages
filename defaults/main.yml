@@ -1,7 +1,6 @@
 ---
 # defaults file for ansible-role-packages
 common:
-  - bind-tools
   - bison
   - coreutils
   - ctags
@@ -55,7 +54,9 @@ common:
   - zip
 
 debian:
+  - dnsutils
   - fd-find
 
 arch:
+  - bind-tools
   - fd
