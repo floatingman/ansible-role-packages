@@ -54,6 +54,11 @@ debian:
   - fd-find
   - fonts-hack-ttf
   - libxfixes-dev
+  - x11proto-core-dev
+  - libx11-dev
+  - libxt-dev
+  - libxfixes-dev
+  - libxi-dev
   - texlive
   - libxext-dev
 
