@@ -23,6 +23,7 @@ common:
   - neovim
   - neovim
   - newsboat
+  - npm
   - pandoc
   - pdfgrep
   - pkg-config
