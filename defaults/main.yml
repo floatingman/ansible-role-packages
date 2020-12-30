@@ -27,7 +27,6 @@ common:
   - pandoc
   - pdfgrep
   - pkg-config
-  - prettier
   - ranger
   - ripgrep
   - rsync
@@ -60,3 +59,4 @@ debian:
 arch:
   - bind-tools
   - fd
+  - prettier
