@@ -28,6 +28,7 @@ common:
   - pkg-config
   - ranger
   - ripgrep
+  - rofi
   - rsync
   - shellcheck
   - sshfs
