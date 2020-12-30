@@ -53,6 +53,7 @@ debian:
   - exuberant-ctags
   - fd-find
   - fonts-hack-ttf
+  - libxfixes-dev
   - texlive
   - libxext-dev
 
