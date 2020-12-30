@@ -54,6 +54,7 @@ debian:
   - fd-find
   - fonts-hack-ttf
   - texlive
+  - libxext-dev
 
 arch:
   - ctags
