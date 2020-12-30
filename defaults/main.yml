@@ -3,7 +3,6 @@
 common:
   - bison
   - coreutils
-  - ctags
   - curl
   - dateutils
   - dnsutils
@@ -51,11 +50,13 @@ common:
 
 debian:
   - dnsutils
+  - exuberant-ctags
   - fd-find
   - fonts-hack-ttf
   - texlive
 
 arch:
+  - ctags
   - bind-tools
   - fd
   - prettier
