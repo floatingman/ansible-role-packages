@@ -42,7 +42,6 @@ common:
   - translate-shell
   - trash-cli
   - tree
-  - ueberzug
   - vifm
   - wget
   - whois
