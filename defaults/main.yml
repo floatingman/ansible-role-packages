@@ -17,6 +17,7 @@ common:
   - hugo
   - ipcalc
   - lsof
+  - mariadb-clients
   - mpv
   - ncdu
   - neomutt

@@ -27,5 +27,5 @@
     state: present
   when: force_install|default(false)|bool == true
 
-- include_tasks: yay.yml
+- include_tasks: aur.yml
   when: aur == true
