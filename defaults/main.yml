@@ -15,9 +15,13 @@ common:
   - htop
   - htop
   - hugo
+  - iftop
+  - iotop
   - ipcalc
   - lsof
   - mariadb-clients
+  - mdp
+  - moreutils
   - mpv
   - ncdu
   - neomutt
@@ -45,6 +49,7 @@ common:
   - trash-cli
   - tree
   - vifm
+  - w3m
   - wget
   - whois
   - xclip
