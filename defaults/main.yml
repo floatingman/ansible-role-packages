@@ -3,6 +3,7 @@
 common:
   - bison
   - coreutils
+  - clipmenu
   - curl
   - dateutils
   - dnsutils
@@ -52,7 +53,9 @@ common:
   - w3m
   - wget
   - whois
+  - xbindkeys
   - xclip
+  - xorg-xinput
   - zip
   - zip
 
@@ -60,7 +63,6 @@ debian:
   - dnsutils
   - exuberant-ctags
   - fd-find
-  - fonts-hack-ttf
   - libxfixes-dev
   - x11proto-core-dev
   - libx11-dev
@@ -76,4 +78,32 @@ arch:
   - fd
   - prettier
   - texlive-core
-  - ttf-hack
+
+pip:
+  - "molecule[docker]"
+  - aws-shell
+  - awscli
+  - flake8
+  - gita
+  - gitlabber
+  - grip
+  - httpie
+  - ipython
+  - jedi
+  - jupyterlab
+  - khal
+  - khard
+  - matplotlib
+  - molecule
+  - mycli
+  - neovim-remote
+  - pandas
+  - python-rofi
+  - selenium
+  - s4cmd
+  - speedtest-cli
+  - testinfra
+  - thefuck
+  - ueberzug
+  - yamllint
+  - vdirsyncer

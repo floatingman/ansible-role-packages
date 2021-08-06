@@ -1,6 +1,8 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    aur: "true"
   tasks:
     - name: "Include ansible-role-packages"
       include_role:

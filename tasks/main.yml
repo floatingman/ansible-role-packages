@@ -3,29 +3,29 @@
 - name: Install common packages
   become: true
   package:
-    name: '{{ common }}'
+    name: "{{ common }}"
     state: present
 
 - name: Install Arch packages
   become: true
   pacman:
-    name: '{{ arch }}'
+    name: "{{ arch }}"
     state: present
   when: ansible_os_family == "Archlinux"
 
 - name: Install Debian packages
   become: true
   apt:
-    name: '{{ debian }}'
+    name: "{{ debian }}"
     state: present
   when: ansible_os_family == "Debian"
 
-- name: Install Laptop packages
-  become: true
-  apt:
-    name: '{{ laptop }}'
+- name: Install pip packages
+  pip:
+    name: "{{ pip }}"
+    extra_args: --user
     state: present
-  when: force_install|default(false)|bool == true
+    executable: pip
 
 - include_tasks: aur.yml
   when: aur == true

@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: packages
-    image: archlinux/base:latest
+    image: archlinux:base
     dockerfile: Dockerfile.j2
     pull: false
     pre_build_image: false

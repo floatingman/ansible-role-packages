@@ -1,26 +1,25 @@
-ansible-role-packages
-=========
+# ansible-role-packages
 
-Install applications on an Arch or Ubuntu based systems via its package manager. Optionally, install an AUR package manager on Arch based systems.
+Install applications on an Arch or Ubuntu based systems via its package manager and pip. Optionally, install an AUR package manager on Arch based systems.
 
-Requirements
-------------
+## Test
+
+Run `molecule test` to test this role in a docker container
+
+## Requirements
 
 - Arch Linux or Ubuntu based OS
 - Sudo permissions
 
-Role Variables
---------------
+## Role Variables
 
-- `aur`: set tot true to install an [AUR helper](https://aur.archlinux.org/)
+- `aur`: set to true to install an [AUR helper](https://aur.archlinux.org/)
 
-Dependencies
-------------
+## Dependencies
 
 ansible-role-basic
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```
 ---
@@ -29,13 +28,11 @@ Example Playbook
   connection: local
   pre_tasks:
     - set_fact:
-      laptop: true
-      aur: true
+        aur: true
   roles:
     - ansible-role-packages
 ```
 
-License
--------
+## License
 
 MIT
