@@ -102,7 +102,7 @@ pip:
   - selenium
   - s4cmd
   - speedtest-cli
-  - testinfra
+  - pytest-testinfra
   - thefuck
   - ueberzug
   - yamllint
