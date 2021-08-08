@@ -24,7 +24,6 @@ common:
   - mdp
   - moreutils
   - mpv
-  - ncdu
   - neomutt
   - neovim
   - neovim
