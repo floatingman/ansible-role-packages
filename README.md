@@ -1,6 +1,6 @@
 # ansible-role-packages
 
-Install applications on an Arch or Ubuntu based systems via its package manager and pip. Optionally, install an AUR package manager on Arch based systems.
+Install applications on an Arch or Ubuntu based systems via its package manager. Optionally, install an AUR package manager on Arch based systems.
 
 ## Test
 

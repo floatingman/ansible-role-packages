@@ -20,12 +20,5 @@
     state: present
   when: ansible_os_family == "Debian"
 
-- name: Install pip packages
-  pip:
-    name: "{{ pip }}"
-    extra_args: --user
-    state: present
-    executable: pip
-
 - include_tasks: aur.yml
   when: aur == true
