@@ -3,6 +3,7 @@
   hosts: all
   vars:
     install_aur_helper: true
+    is_test: true
     cli:
       enabled: true
       common:

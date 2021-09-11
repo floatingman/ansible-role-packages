@@ -72,4 +72,4 @@
   when: ansible_os_family == "Debian" and lang.debian is defined and lang.enabled|default(false) == true
 
 - include_tasks: aur.yml
-  when: ansible_os_family == "Archlinux" and install_aur_helper == true
+  when: ansible_os_family == "Archlinux" and install_aur_helper|default(false) == true

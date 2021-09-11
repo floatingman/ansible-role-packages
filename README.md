@@ -13,28 +13,29 @@ Run `molecule test` to test this role in a docker container
 
 ## Role Variables
 
-- `cli`: manage CLI packages for instance for server configuration
+- `cli`: Manage CLI packages for instance for server configuration
 
   - `cli.enabled`: Set to `True` to enable installation of cli packages
   - `cli.common`: List of common packages to install on all types of OS
   - `cli.arch`: List of packages to install on Arch Linux only
   - `cli.debian`: List of packages to install on Debian only
 
-- `gui`: manage GUI packages for instance for workstation/Laptop configuration
+- `gui`: Manage GUI packages for instance for workstation/Laptop configuration
 
   - `gui.enabled`: Set to `True` to enable installation of GUI packages
   - `gui.common`: List of common packages to install on all types of OS
   - `gui.arch`: List of packages to install on Arch Linux only
   - `gui.debian`: List of packages to install on Debian only
 
-- `lang`: manage programming languages
+- `lang`: Manage programming languages
 
   - `lang.enabled`: Set to `True` to enable installation of programming languages
   - `lang.common`: List of common packages to install on all types of OS
   - `lang.arch`: List of packages to install on Arch Linux only
   - `lang.debian`: List of packages to install on Debian only
 
-- `aur`: set to true to install an [AUR helper](https://aur.archlinux.org/)
+- `install_aur_helper`: Set to `True` to install an [AUR helper](https://aur.archlinux.org/)
+- `is_test`: Set to `True` only required when running molecule test
 
 ## Dependencies
 
