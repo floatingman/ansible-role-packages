@@ -13,6 +13,9 @@ Run `molecule test` to test this role in a docker container
 
 ## Role Variables
 
+- `common`: common packages to be installed
+- `arch`: packages to be installed on Arch only
+- `debian`: packages to be installed on Debian only
 - `aur`: set to true to install an [AUR helper](https://aur.archlinux.org/)
 
 ## Dependencies
@@ -21,17 +24,7 @@ ansible-role-basic
 
 ## Example Playbook
 
-```
----
-- name: Playbook
-  hosts: localhost
-  connection: local
-  pre_tasks:
-    - set_fact:
-        aur: true
-  roles:
-    - ansible-role-packages
-```
+See [converge.yml](https://github.com/Allaman/ansible-role-packages/blob/master/molecule/default/converge.yml)
 
 ## License
 
