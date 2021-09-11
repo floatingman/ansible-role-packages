@@ -1,6 +1,6 @@
 # ansible-role-packages
 
-Install applications on an Arch or Ubuntu based systems via its package manager. Optionally, install an AUR package manager on Arch based systems.
+Install packages on Arch or Ubuntu based systems via their package manager. Optionally, install an AUR package manager on Arch based systems.
 
 ## Test
 
@@ -13,9 +13,27 @@ Run `molecule test` to test this role in a docker container
 
 ## Role Variables
 
-- `common`: common packages to be installed
-- `arch`: packages to be installed on Arch only
-- `debian`: packages to be installed on Debian only
+- `cli`: manage CLI packages for instance for server configuration
+
+  - `cli.enabled`: Set to `True` to enable installation of cli packages
+  - `cli.common`: List of common packages to install on all types of OS
+  - `cli.arch`: List of packages to install on Arch Linux only
+  - `cli.debian`: List of packages to install on Debian only
+
+- `gui`: manage GUI packages for instance for workstation/Laptop configuration
+
+  - `gui.enabled`: Set to `True` to enable installation of GUI packages
+  - `gui.common`: List of common packages to install on all types of OS
+  - `gui.arch`: List of packages to install on Arch Linux only
+  - `gui.debian`: List of packages to install on Debian only
+
+- `lang`: manage programming languages
+
+  - `lang.enabled`: Set to `True` to enable installation of programming languages
+  - `lang.common`: List of common packages to install on all types of OS
+  - `lang.arch`: List of packages to install on Arch Linux only
+  - `lang.debian`: List of packages to install on Debian only
+
 - `aur`: set to true to install an [AUR helper](https://aur.archlinux.org/)
 
 ## Dependencies

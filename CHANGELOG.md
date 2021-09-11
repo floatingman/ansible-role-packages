@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-09-11
+
+### Changed
+
+- split packages into CLI and GUI packages (from ansible-role-gui)
+- disable installation of AUR Helper in molecule test
+
+### Added
+
+- integrate installation of programming languages (from ansible-role-gui)
+
 ## [1.0.0] - 2021-09-11
 
 ### Changed
