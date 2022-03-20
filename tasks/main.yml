@@ -88,6 +88,15 @@
     validate: 'visudo -cf %s'
   when: ansible_os_family == "Archlinux" and aur is defined
 
+- name: Install Paru
+  aur:
+    name: paru
+    use: auto
+    state: present
+  become: yes
+  become_user: aur_builder
+  when: ansible_os_family == "Archlinux" and aur is defined
+
 - name: Install Arch Aur packages
   aur:
     name: "{{ aur.packages }}"
