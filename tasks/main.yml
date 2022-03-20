@@ -89,7 +89,6 @@
   when: ansible_os_family == "Archlinux" and aur is defined
 
 - name: Install Arch Aur packages
-  become: true
   aur:
     name: "{{ aur.packages }}"
     use: auto
