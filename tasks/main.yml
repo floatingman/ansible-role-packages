@@ -91,7 +91,7 @@
 - name: Install Arch Aur packages
   become: true
   aur:
-    name: "{{ aur_packages }}"
+    name: "{{ aur.packages }}"
     use: auto
     state: present
   become: yes
