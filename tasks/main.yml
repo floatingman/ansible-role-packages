@@ -71,5 +71,29 @@
     state: present
   when: ansible_os_family == "Debian" and lang.debian is defined and lang.enabled|default(false) == true
 
-- include_tasks: aur.yml
-  when: ansible_os_family == "Archlinux" and install_aur_helper|default(false) == true
+- name: Create the `aur_builder` user
+  become: yes
+  ansible.builtin.user:
+    name: aur_builder
+    create_home: yes
+    group: wheel
+  when: ansible_os_family == "Archlinux" and aur is defined
+
+- name: Allow the `aur_builder` user to run `sudo pacman` without a password
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    validate: 'visudo -cf %s'
+  when: ansible_os_family == "Archlinux" and aur is defined
+
+- name: Install Arch Aur packages
+  become: true
+  aur:
+    name: "{{ aur_packages }}"
+    use: auto
+    state: present
+  become: yes
+  become_user: aur_builder
+  when: ansible_os_family == "Archlinux" and aur is defined
