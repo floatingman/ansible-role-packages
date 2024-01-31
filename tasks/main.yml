@@ -83,14 +83,14 @@
   become: yes
   ansible.builtin.lineinfile:
     path: /etc/sudoers.d/11-install-aur_builder
-    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
     create: yes
-    validate: 'visudo -cf %s'
+    validate: "visudo -cf %s"
   when: ansible_os_family == "Archlinux" and aur is defined
 
-- name: Install Paru
+- name: Install Yay
   aur:
-    name: paru
+    name: yay
     use: auto
     state: present
   become: yes
