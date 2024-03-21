@@ -9,7 +9,7 @@
 
 - name: Install Arch CLI packages
   become: true
-  pacman:
+  package:
     update_cache: true
     name: "{{ cli.arch}}"
     state: present
@@ -17,7 +17,7 @@
 
 - name: Install Debian packages
   become: true
-  apt:
+  package:
     update_cache: true
     name: "{{ cli.debian }}"
     state: present
@@ -25,7 +25,7 @@
 
 - name: Install common GUI packages
   become: true
-  pacman:
+  package:
     update_cache: true
     name: "{{ gui.common }}"
     state: present
@@ -33,7 +33,7 @@
 
 - name: Install Arch GUI packages
   become: true
-  pacman:
+  package:
     update_cache: true
     name: "{{ gui.arch }}"
     state: present
@@ -41,7 +41,7 @@
 
 - name: Install Debian GUI packages
   become: true
-  apt:
+  package:
     update_cache: true
     name: "{{ gui.debian }}"
     state: present
@@ -49,7 +49,7 @@
 
 - name: Install common language packages
   become: true
-  pacman:
+  package:
     update_cache: true
     name: "{{ lang.common }}"
     state: present
@@ -57,7 +57,7 @@
 
 - name: Install Arch lang packages
   become: true
-  pacman:
+  package:
     update_cache: true
     name: "{{ lang.arch }}"
     state: present
@@ -65,43 +65,8 @@
 
 - name: Install Debian lang packages
   become: true
-  apt:
+  package:
     update_cache: true
     name: "{{ lang.debian }}"
     state: present
   when: ansible_os_family == "Debian" and lang.debian is defined and lang.enabled|default(false) == true
-
-- name: Create the `aur_builder` user
-  become: yes
-  ansible.builtin.user:
-    name: aur_builder
-    create_home: yes
-    group: wheel
-  when: ansible_os_family == "Archlinux" and aur is defined
-
-- name: Allow the `aur_builder` user to run `sudo pacman` without a password
-  become: yes
-  ansible.builtin.lineinfile:
-    path: /etc/sudoers.d/11-install-aur_builder
-    line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
-    create: yes
-    validate: "visudo -cf %s"
-  when: ansible_os_family == "Archlinux" and aur is defined
-
-- name: Install Yay
-  aur:
-    name: yay
-    use: auto
-    state: present
-  become: yes
-  become_user: aur_builder
-  when: ansible_os_family == "Archlinux" and aur is defined
-
-- name: Install Arch Aur packages
-  aur:
-    name: "{{ aur.packages }}"
-    use: auto
-    state: present
-  become: yes
-  become_user: aur_builder
-  when: ansible_os_family == "Archlinux" and aur is defined
